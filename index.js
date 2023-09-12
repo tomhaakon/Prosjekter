@@ -13,7 +13,7 @@ app.set("env", NODE_ENV);
 app.use(logger("tiny"));
 app.use(bodyParser.json());
 
-app.use("/", require(path.join(__dirname, "routes")));
+app.use("/", require(path.join(__dirname, "./routes/")));
 //app.use("/", require("./routes"));
 
 app.use((req, res, next) => {

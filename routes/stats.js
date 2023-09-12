@@ -25,7 +25,6 @@ const getStats = async (req, res, next) => {
 };
 router.route("/api/v1/stats/:id").get(getStats);
 
-
 //post
 const createStats = async (req, res, next) => {
   try {
@@ -44,10 +43,9 @@ const createStats = async (req, res, next) => {
     next(e);
   }
 };
-
-//update
 router.route("/api/v1/stats").post(createStats);
 
+//update
 const updateStats = async (req, res, next) => {
   try {
     const data = fs.readFileSync(statsFilePath);
